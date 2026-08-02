@@ -8,10 +8,8 @@ const cupsHelp = document.getElementById("cupsHelp");
 const formMessage = document.getElementById("formMessage");
 
 // Replace this with your real Yoco Checkout/payment-link URL later.
-const YOCO_PAYMENT_URL = "";
-
 // Replace this email address with the real Trackspresso booking email.
-const BOOKING_EMAIL = "bookings@trackspresso.co.za";
+const BOOKING_EMAIL = "mbdesousa50@gmail.com";
 
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 
@@ -137,7 +135,7 @@ bookingForm.addEventListener("submit", (event) => {
   const body = encodeURIComponent(buildEmailBody(booking));
 
   showMessage(
-    "Your request has been prepared. Your email app will open so you can send it to Trackspresso.",
+    "Almost done! You will now be redirected to your email application. Review the completed booking details and press 'Send' to submit your request to Trackspresso.",
     "success"
   );
 
@@ -145,6 +143,4 @@ bookingForm.addEventListener("submit", (event) => {
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${subject}&body=${body}`;
   }, 500);
 
-  // Once your Yoco link is ready, you may redirect there after confirmation:
-  // if (YOCO_PAYMENT_URL) window.location.href = YOCO_PAYMENT_URL;
 });
