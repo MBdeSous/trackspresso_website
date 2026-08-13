@@ -541,13 +541,50 @@
             ></textarea>
           </div>
 
-          <label class="checkbox-row">
-            <input type="checkbox" id="terms" required />
-            <span>
-              I understand that this is a booking request. A cup package or booking
-              deposit must be paid before the selected date and time are secured.
-            </span>
-          </label>
+          <div class="booking-confirmation-column">
+
+  <label class="checkbox-row">
+    <input type="checkbox" id="terms" required />
+
+    <span>
+      I understand that this is a booking request. A cup package or booking
+      deposit must be paid before the selected date and time are secured.
+    </span>
+  </label>
+
+
+  <div class="form-group guest-estimate-group">
+
+    <label for="estimatedGuests">
+      Estimated cups / guests
+      <span id="guestEstimateValue">80 cups</span>
+    </label>
+
+    <input
+      id="estimatedGuests"
+      name="estimatedGuests"
+      type="range"
+      min="20"
+      max="300"
+      step="10"
+      value="80"
+    />
+
+    <div class="slider-labels">
+      <span>20</span>
+      <span>Approximate only</span>
+      <span>300+</span>
+    </div>
+
+    <small>
+      This is only an estimate to help us prepare enough stock and supplies.
+    </small>
+
+  </div>
+
+</div>
+
+          
 
           <button class="button button-full" type="submit">Request booking</button>
 
