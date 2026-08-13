@@ -56,6 +56,122 @@ textarea {
 button {
   cursor: pointer;
 }
+/*
+.promo-strip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 0;
+  z-index: 99999;
+  
+   Link the animation name, duration, and movement curve 
+  animation: slideDown 0.5s ease-out forwards; 
+}
+
+/* Define the slide-down movement 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); Start completely hidden off-screen
+  }
+  to {
+    transform: translateY(0);     End in its natural position 
+  }
+}
+*/
+
+/*
+.pulse-text {
+  display: inline-block;
+  font-weight: bold;
+  color: #ffcc00;  Contrast color for the code 
+  animation: gentlePulse 2s infinite ease-in-out;
+}
+
+/* Define the pulse (scaling and slight brightness change) 
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);  Grow slightly 
+    filter: brightness(1.2);  Brighten up 
+  }
+}*/
+
+
+
+
+
+.announcement-bar {
+    width: 100%;
+    overflow: hidden;
+    background: #3b3b3b;
+    color: white;
+    padding: 14px 0;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.announcement-track {
+    display: flex;
+    width: max-content;
+    animation: scrollAnnouncement 18s linear infinite;
+}
+
+.announcement-track span {
+    padding: 0 70px;
+}
+
+@keyframes scrollAnnouncement {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/*
+
+==========================================================================================
+*/
+
+
+.booking-price-box {
+    min-height: 58px;
+    padding: 12px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#bookingPrice {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#priceBreakdown {
+    margin-top: 3px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+
+
+/*=========================================================================================*/
+
 
 .container {
   width: min(calc(100% - 40px), var(--container));
