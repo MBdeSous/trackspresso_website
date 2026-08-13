@@ -1808,4 +1808,54 @@ section[id] {
   .nav-links > a:not(.button) {
     min-height: 50px;
   }
+
+.guest-estimate-group {
+  margin-bottom: 24px;
+}
+
+.guest-estimate-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#guestEstimateValue {
+  color: var(--blue-300);
+  font-weight: 700;
+}
+
+#estimatedGuests {
+  padding: 0;
+  min-height: auto;
+  cursor: pointer;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.guest-estimate-group small {
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.booking-confirmation-column {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.booking-confirmation-column .checkbox-row {
+  margin: 0;
+}
+
+.guest-estimate-group {
+  margin-bottom: 0;
+}
+
+
 }
