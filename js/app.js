@@ -12,6 +12,8 @@ const priceBreakdown = document.getElementById("priceBreakdown");
 const formMessage = document.getElementById("formMessage");
 
 const packageButtons = document.querySelectorAll(".package-select");
+const estimatedGuests = document.getElementById("estimatedGuests");
+const guestEstimateValue = document.getElementById("guestEstimateValue");
 
 const BOOKING_EMAIL = "jtcrossman3child@gmail.com";
 
@@ -347,6 +349,8 @@ function buildEmailBody(data) {
 
         `Booking price: ${getBookingPrice()}`,
 
+        `Estimated cups / guests: ${data.estimatedGuests}`,
+        
         `Location: ${data.location}`,
 
         "",
@@ -446,3 +450,19 @@ bookingForm.addEventListener(
 
     }
 );
+
+estimatedGuests.addEventListener("input", () => {
+    guestEstimateValue.textContent = estimatedGuests.value;
+});
+
+function updateGuestEstimate() {
+    guestEstimateValue.textContent =
+        `${estimatedGuests.value} cups`;
+}
+
+estimatedGuests.addEventListener(
+    "input",
+    updateGuestEstimate
+);
+
+updateGuestEstimate();
