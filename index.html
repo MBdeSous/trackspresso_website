@@ -22,7 +22,41 @@
 </head>
 
 <body>
+
+  <!--<div class="promo-strip">
+    <p>Flash Sale! Use code <span class="pulse-text">SUPER30</span> for 30% off!</p>
+  </div>-->
+
+<!--
+-->
+
+
+
   <header class="site-header" id="top">
+
+
+<div class="announcement-bar">
+    <div class="announcement-track">
+        <span>BOOK NOW!!</span>
+        <span>ICED COFFEE COMING SOON!!</span>
+        
+        <span>BOOK NOW!!</span>
+        <span>ICED COFFEE COMING SOON!!</span>
+
+        <span>BOOK NOW!!</span>
+        <span>ICED COFFEE COMING SOON!!</span>
+        
+        <span>BOOK NOW!!</span>
+        <span>ICED COFFEE COMING SOON!!</span>
+    </div>
+</div>
+
+
+
+
+
+
+
     <nav class="navbar container" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Trackspresso home">
         <img src="./assets/images/trackspresso-profile.png" alt="" class="brand-mark" />
@@ -49,6 +83,15 @@
         <a class="button button-small button-outline" href="#booking">Check availability</a>
       </div>
     </nav>
+
+<!--
+<div class="promo-strip">
+  <p>Flash Sale! Use code <span class="pulse-text">SUPER30</span> for 30% off!</p>
+</div> -->
+
+
+
+
   </header>
 
   <main>
@@ -202,8 +245,13 @@
               <li>Extra hours can be added when available</li>
             </ul>
 
-            <button class="button package-select" type="button" data-package="Minimum cup booking">
-              Select hourly package
+            <button
+                class="button package-select"
+                type="button"
+                data-package="Hourly booking"
+                data-duration="1"
+            >
+                Select hourly package
             </button>
           </article>
 
@@ -232,8 +280,13 @@
               <li>Perfect for markets, sports events and private functions</li>
             </ul>
 
-            <button class="button package-select" type="button" data-package="Time-slot booking">
-              Reserve a time slot
+            <button
+                class="button package-select"
+                type="button"
+                data-package="Half-day booking"
+                data-duration="6"
+            >
+                Select half-day package
             </button>
           </article>
 
@@ -259,8 +312,13 @@
               <li>Travel and setup included in quote</li>
             </ul>
 
-            <button class="button package-select" type="button" data-package="Full event service">
-              Request full day quote
+            <button
+                class="button package-select"
+                type="button"
+                data-package="Full-day booking"
+                data-duration="12"
+            >
+                Select full-day package
             </button>
           </article>
         </div>
@@ -415,24 +473,22 @@
               <label for="bookingType">Booking option</label>
               <select id="bookingType" name="bookingType" required>
                 <option value="">Choose an option</option>
-                <option>Minimum cup booking</option>
-                <option>Time-slot booking</option>
-                <option>Full event service</option>
+                <option value="Hourly booking">Hourly booking</option>
+                <option value="Half-day booking">Half-day booking</option>
+                <option value="Full-day booking">Full-day booking</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="estimatedCups">Estimated cups</label>
-              <input
-                id="estimatedCups"
-                name="estimatedCups"
-                type="number"
-                min="0"
-                value="40"
-              />
-              <small id="cupsHelp">Minimum cup package: 40 cups. Not required for time-slot bookings.</small>
+              <label>Booking price</label>
+
+              <div class="booking-price-box">
+                <span id="bookingPrice">Select a package</span>
+                <small id="priceBreakdown">
+                  Your estimated booking price will appear here.
+                </small>
+              </div>
             </div>
-          </div>
 
           <div class="form-row">
             <div class="form-group">
@@ -451,10 +507,15 @@
               <label for="duration">Expected duration</label>
               <select id="duration" name="duration" required>
                 <option value="">Select duration</option>
-                <option>2 hours</option>
-                <option>3 hours</option>
-                <option>Half day</option>
-                <option>Full day</option>
+                
+                <option value="1">1 hour</option>
+                <option value="2">2 hours</option>
+                <option value="3">3 hours</option>
+                <option value="4">4 hours</option>
+                <option value="5">5 hours</option>
+
+                <option value="6">Half day (6 hours)</option>
+                <option value="12">Full day (12 hours)</option>
               </select>
             </div>
 
