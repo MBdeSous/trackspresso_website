@@ -15,6 +15,157 @@
   --container: 1180px;
 }
 
+
+/* =========================
+   TRACKSPRESSO MENU
+========================= */
+
+.coffee-menu {
+    background: #f3f0e8;
+    padding: 90px 20px;
+    color: #252820;
+}
+
+.menu-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.menu-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.menu-heading span {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: #77786d;
+    margin-bottom: 12px;
+}
+
+.menu-heading h2 {
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    line-height: 0.9;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.menu-heading p {
+    margin-top: 18px;
+    color: #74766d;
+    font-size: 1rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px 80px;
+}
+
+.menu-category h3 {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin: 0 0 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #252820;
+}
+
+.menu-item {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.menu-item > span:first-child {
+    white-space: nowrap;
+}
+
+.menu-item strong {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.dots {
+    flex: 1;
+    border-bottom: 1px dotted #a4a499;
+    margin: 0 12px 5px;
+}
+
+.iced-menu {
+    grid-column: 1 / -1;
+    max-width: 485px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flavours {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: -7px 0 24px;
+}
+
+.flavours span {
+    font-size: 0.75rem;
+    background: #dedbcf;
+    color: #55574f;
+    padding: 6px 11px;
+    border-radius: 20px;
+}
+
+.menu-footer {
+    text-align: center;
+    margin-top: 65px;
+    padding-top: 25px;
+    border-top: 1px solid #d3d0c5;
+}
+
+.menu-footer span {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: #77786d;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .coffee-menu {
+        padding: 65px 22px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .iced-menu {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .menu-heading {
+        margin-bottom: 45px;
+    }
+
+    .menu-heading h2 {
+        font-size: 3rem;
+    }
+
+    .menu-item {
+        font-size: 1rem;
+    }
+}
+
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
